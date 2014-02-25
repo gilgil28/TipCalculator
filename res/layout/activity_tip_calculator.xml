@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TipCalculatorActivity" >
+    
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/headline_font_size"
+        android:text="@string/app_name"/>
+
+    <CheckBox
+        android:id="@+id/round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tipEditText"
+        android:layout_marginTop="16dp"
+        android:checked="false" />
+    
+    <TextView
+        android:id="@+id/checkboxRoundLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/round"
+        android:layout_alignBottom="@+id/round"
+        android:layout_toRightOf="@+id/tipAmount"
+        android:text="@string/round" />
+
+    <EditText
+        android:id="@+id/tipTotalEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tipTotal"
+        android:layout_alignBottom="@+id/tipTotal"
+        android:layout_alignLeft="@+id/tipEditText"
+        android:layout_marginRight="5dp"
+        android:ems="5"
+        android:focusable="false"
+        android:inputType="numberDecimal"
+        android:text="@string/defult_tip" />
+
+    <EditText
+        android:id="@+id/billEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/billAmount"
+        android:layout_alignBottom="@+id/billAmount"
+        android:layout_alignLeft="@+id/tipEditText"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:text="@string/defult_bill" />
+    
+    <EditText
+        android:id="@+id/tipEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tipAmount"
+        android:layout_alignBottom="@+id/tipAmount"
+        android:layout_alignParentRight="true"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:text="@string/defult_tip" />
+    
+
+    <TextView
+        android:id="@+id/tipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/billAmount"
+        android:layout_below="@+id/billAmount"
+        android:layout_marginTop="16dp"
+        android:text="@string/tip_amount" />
+
+    <TextView
+        android:id="@+id/tipTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/total"
+        android:layout_alignLeft="@+id/round"
+        android:layout_marginBottom="16dp"
+        android:focusable="false"
+        android:text="@string/tip_total" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:text="@string/total" />
+
+    <TextView
+        android:id="@+id/billAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/appName"
+        android:layout_marginTop="16dp"
+        android:text="@string/bill_amount" />
+
+    <EditText
+        android:id="@+id/totalEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/total"
+        android:layout_alignBottom="@+id/total"
+        android:layout_alignLeft="@+id/tipTotalEditText"
+        android:ems="5"
+        android:focusable="false"
+        android:inputType="numberDecimal" />
+
+</RelativeLayout>
